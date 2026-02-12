@@ -1,0 +1,26 @@
+.btn {
+  font-family: var(--raleway-font);
+  font-size: 16px;
+  font-weight: 400;
+  border-radius: 32px;
+  border: none;
+  padding: 12px 24px;
+  cursor: pointer;
+}
+.btn-primary {
+  background: var(--gradient-blue-pink);
+  color: var(--white);
+}
+.btn-secondary {
+    background: var(--gradient-green-blue);
+    color: var(--white);
+}
+.btn-tertiary {
+    background-color: var(--blue);
+    color: var(--white);
+}
+.btn-primary:hover, .btn-secondary:hover, .btn-tertiary:hover {
+    background: none;
+    color: var(--blue);
+    border: 1px solid var(--blue);
+}

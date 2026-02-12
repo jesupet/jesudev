@@ -1,0 +1,44 @@
+@font-face {
+    font-family: "Raleway";
+    src: url('../../fonts/Raleway-VariableFont_wght.ttf') format('truetype');
+    font-style: normal;
+    font-display: swap;
+  }
+  @font-face {
+    font-family: "Just Me Again Down Here";
+    src: url('../../fonts/JustMeAgainDownHere-Regular.ttf') format('truetype');
+    font-weight: 400;
+    font-style: normal;
+  }
+  
+  /*Fonts*/
+  
+  :root {
+    --raleway-font: 'Raleway', sans-serif;
+    --just-me-again-down-here-font: 'Just Me Again Down Here', cursive;
+  } 
+  
+  /*Colors*/
+  
+  :root {
+    --black: #000000;
+    --blue: #2f61ab;
+    --green: #a3c835;
+    --pink: #d7338a;
+    --white: #ffffff;
+    --gradient-blue-pink: linear-gradient(to right, var(--blue), var(--pink));
+    --gradient-pink-green: linear-gradient(to right, var(--pink), var(--green));
+    --gradient-green-blue: linear-gradient(to right, var(--green), var(--blue));
+  }
+  
+  /*Responsive*/
+  
+  :root {
+    --phone-width: 576px; /* sm en BS */
+    --tablet-width: 768px; /*  md en BS */
+    --big-tablet-width: 992px; /*  lg en BS */
+    --desktop-width: 1200px; /*  xl en BS */
+  }
+  
+  
+  

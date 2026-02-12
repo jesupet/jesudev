@@ -1,0 +1,141 @@
+
+.navbar-jesudev {
+  background-color: var(--black);
+  font-family: var(--raleway-font);
+  padding: 20px;
+  position: sticky;
+  top: 0;
+  z-index: 1030;
+}
+
+/* Un solo toggler: en desktop order 1 (izquierda), en mobile order 4 (derecha) */
+.navbar-jesudev .nav-toggler-jesudev {
+  order: 4;
+}
+
+.navbar-jesudev .nav-toggler-jesudev .navbar-toggler-icon {
+  background-image: url("@/assets/icons/toggler_icon.svg");
+}
+
+@media (min-width: 992px) {
+  .navbar-jesudev .nav-toggler-jesudev {
+    order: 1;
+  }
+}
+
+/* Logo centrado */
+.navbar-jesudev .navbar-brand.nav-brand-center {
+  order: 2;
+  color: var(--white) !important;
+  font-weight: 600;
+  margin: 0;
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+@media (min-width: 992px) {
+  .navbar-jesudev .navbar-brand.nav-brand-center {
+    position: static;
+    transform: none;
+  }
+}
+
+/* CTA desktop: visible solo en lg, orden derecha */
+.navbar-jesudev .nav-desktop-cta {
+  order: 3;
+}
+
+/* Collapse: pantalla completa, entra de derecha a izquierda */
+.navbar-jesudev .navbar-collapse {
+  order: 5;
+  position: fixed;
+  top: 0;
+  right: 0;
+  width: 100%;
+  height: 100vh !important; /* Sobrescribe el height:0 que aplica Bootstrap al cerrar */
+  max-height: 100vh;
+  background-color: var(--black);
+  flex-basis: 100%;
+  padding: 2rem;
+  padding-top: 5rem;
+  z-index: 1029;
+  overflow-y: auto;
+  /* Entrada de derecha a izquierda */
+  transform: translateX(100%);
+  transition: transform 1s ease-in-out;
+  box-shadow: none;
+}
+
+.navbar-jesudev .navbar-collapse.show {
+  transform: translateX(0);
+  box-shadow: -0.25rem 0 1rem rgba(0, 0, 0, 0.3);
+}
+
+@media (min-width: 992px) {
+  .navbar-jesudev .navbar-collapse {
+    order: 2;
+    position: relative;
+    top: auto;
+    right: auto;
+    width: auto;
+    height: auto;
+    max-height: none;
+    padding: 0;
+    padding-top: 0;
+    flex-basis: auto;
+    flex-grow: 0;
+    margin-left: 1rem;
+    transform: none;
+    overflow-y: visible;
+    background-color: transparent;
+  }
+
+  .navbar-jesudev .navbar-collapse.show {
+    transform: none;
+    box-shadow: none;
+  }
+}
+
+.navbar-jesudev .navbar-nav {
+  align-items: center;
+}
+
+@media (max-width: 991.98px) {
+  .navbar-jesudev .navbar-nav {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 0.5rem;
+  }
+
+  .navbar-jesudev .navbar-nav .nav-item {
+    width: 100%;
+  }
+
+  .navbar-jesudev .navbar-nav .nav-link {
+    display: block;
+    padding: 0.75rem 0;
+    font-size: 1.25rem;
+  }
+}
+
+.navbar-jesudev .navbar-nav .nav-link {
+  color: var(--white);
+  font-weight: 500;
+  transition: color 0.2s;
+}
+
+.navbar-jesudev .navbar-nav .nav-link:hover {
+  color: var(--green);
+}
+
+/* Botón Escríbeme dentro del menú pantalla completa */
+.navbar-jesudev .nav-cta-mobile {
+  margin-top: 2rem;
+  padding-top: 1.5rem;
+  border-top: 1px solid rgba(255, 255, 255, 0.2);
+}
+
+.navbar-logo {
+  max-width: 150px;
+}

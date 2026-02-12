@@ -1,0 +1,25 @@
+html, body {
+  overflow-x: hidden; /* Elimina el scroll horizontal global */
+}
+.container-fluid {
+  --bs-gutter-x: 3rem;
+}
+* {
+  color: var(--white);
+}
+a {
+  text-decoration: none;
+  color: inherit;
+}
+p {
+  margin: 0;
+  font-family: var(--raleway-font);
+  font-size: 16px;
+}
+.container {
+  padding: 0px 24px;
+}
+
+ul {
+  padding: 0px;
+}
