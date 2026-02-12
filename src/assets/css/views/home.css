@@ -1,0 +1,35 @@
+#hero {
+    background-color: var(--black);
+    color: var(--white);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    min-height: 90vh;
+    padding: 0px 300px;
+}
+
+#hero .hero-title {
+    font-size: 72px;
+    line-height: 1.2;
+    font-weight: 600;
+    margin-bottom: 1rem;
+}
+
+/* Animación para el párrafo descriptivo */
+#hero .hero-description {
+    opacity: 0;
+    transform: translateY(20px);
+    transition: opacity 0.6s ease-out, transform 0.6s ease-out;
+}
+
+#hero .hero-description.show {
+    opacity: 1;
+    transform: translateY(0);
+}
+.hand-writting {
+    position: absolute;
+    top: 5vh;
+    right: 0;
+    width: 400px;
+}
