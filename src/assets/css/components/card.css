@@ -1,0 +1,27 @@
+.card {
+    position: relative;
+    border-radius: 20px;
+    box-shadow: 4px 4px 4px rgba(0, 0, 0, 25%);
+    padding: 24px;
+    overflow: hidden;
+    text-align: start;
+    min-height: 350px;
+}
+.curve-card {
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 0;
+}
+.number {
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    background: var(--gradient-blue-pink);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 32px;
+    position: relative;
+    z-index: 1;
+}
