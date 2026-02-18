@@ -65,19 +65,102 @@
       </div>
     </div>
   </section>
+  <section id="sobre-mi">
+    <img src="@/assets/curves/white_curve_2.svg" alt="curva blanca" class="curve">
+    <div class="container">
+      <h2>Un compromiso real con hacer las cosas bien.</h2>
+      <div class="row">
+        <div class="col-lg-7">
+          <div class="row pt-3">
+            <div class="col-lg-6">
+              <p class="p-16">
+                Soy programadora front end y asesora digital, y llegué a la tecnología por un camino poco tradicional.Estudié Ingeniería Comercial, trabajé en startups y siempre me movió la curiosidad por aprender y crear. En plena pandemia descubrí la programación... ¡y me encantó! Ahí entendí que podía unir lo que más me apasiona: la creatividad, la organización y el trabajo con propósito.
+              </p>
+            </div>
+            <div class="col-lg-6">
+              <p class="p-16">
+                Hoy acompaño a empresas, startups y agencias creativas a dar vida a proyectos digitales con un servicio cercano, claro y fluido. No solo programo sitios web: escucho, organizo y traduzco lo técnico a lo simple, para que cada proyecto fluya con confianza y claridad.
+              </p>
+            </div>
+          </div>
+          <p class="p-20 bold pt-3">
+            Jesu.dev es mi manera de demostrar que la programación puede ser creativa, cercana y con propósito.
+          </p>
+          <ButtonComp 
+            :btnColor="'btn-primary'" 
+            :buttonText="'¡Conozcámonos'"
+            :linkBtn="'#servicios'"
+            class="mt-5"
+          />
+        </div>
+      </div>
+    </div>
+    <img src="@/assets/img/yo_escalera.png" alt="jesudev en escalera" class="img-fluid sobre-mi-img">
+  </section>
+  <section id="servicios">
+    <div class="container">
+      <div class="row">
+        <div class="col-lg-6 pe-5">
+          <h3>Desarrollo web para empresas y startups</h3>
+          <p class="p-16">
+            Trabajo junto a diseñadoras y equipos creativos para llevar sus ideas al mundo digital. Transformo diseños en código con fidelidad, fluidez y cuidado por los detalles, asegurando que el resultado final refleje la intención original del diseño.
+          </p>
+          <div class="d-flex flex-wrap justify-content-center pt-3">
+            <TagComp 
+              :tagColor="'blue-tag'" 
+              :tagText="'Desarrollo Sitio Web'"
+            />
+            <TagComp 
+              :tagColor="'pink-tag'" 
+              :tagText="'Branding'"
+            />
+            <TagComp 
+              :tagColor="'green-tag'" 
+              :tagText="'Diseño UX/UI'"
+            />
+            <TagComp 
+              :tagColor="'blue-tag'" 
+              :tagText="'Otros Diseños'"
+            />
+          </div>
+        </div>
+        <div class="col-lg-6 ps-5">
+          <h3>Colaboración con agencias de diseño y diseñadoras</h3>
+          <p class="p-16">
+            Trabajo junto a diseñadoras y equipos creativos para llevar sus ideas al mundo digital. Transformo diseños en código con fidelidad, fluidez y cuidado por los detalles, asegurando que el resultado final refleje la intención original del diseño.
+          </p>
+          <div class="d-flex flex-wrap justify-content-center pt-3">
+            <TagComp 
+              :tagColor="'blue-tag'" 
+              :tagText="'Desarrollo Sitio Web'"
+            />
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+  <section id="metodologia" class="text-center">
+    <div class="container">
+      <h2 class="black">Una metodología clara, un proceso colaborativo</h2>
+      <p class="subtitle blue">Trabajo con una estructura que combina orden y creatividad, donde el feedback es parte esencial del proceso:
+      </p>
+    </div>
+  </section>
 </template>
 
 <script>
 import ButtonComp from '@/components/ButtonComp.vue'
 import BlurText from '@/components/BlurText.vue'
 import ValueCard from '@/components/ValueCard.vue'
+import TagComp from '@/components/TagComp.vue'
 
 export default {
   name: 'HomeView',
   components: {
     ButtonComp,
     BlurText,
-    ValueCard
+    ValueCard,
+    TagComp
   },
   data() {
     return {

@@ -61,3 +61,44 @@
 #values h2 {
     margin-bottom: 0px;
 }
+
+/* Sobre mí */
+#sobre-mi {
+    background-color: var(--black);
+    position: relative;
+    padding: 200px 0px;
+}
+#sobre-mi .curve {
+    top: -1px;
+    z-index: 1;
+}
+#sobre-mi h2 {
+    padding-right: 700px;
+}
+#sobre-mi .container {
+    position: relative;
+}
+.sobre-mi-img {
+    position: absolute;
+    right: 0;
+    top: 150px;
+    max-width: 550px;
+}
+#servicios {
+    background-color: var(--black);
+    padding: 100px 0px;
+    text-align: center;
+}   
+
+/* Metodología */
+#metodologia {
+    padding: 100px 0px;
+    text-align: center;
+}
+#metodologia h2 {
+    padding: 0px 400px;
+}
+#metodologia p {
+    line-height: 1;
+    padding: 0px 300px;
+}
