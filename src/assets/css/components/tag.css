@@ -1,8 +1,12 @@
 .tag {
     border-radius: 8px;
-    padding: 8px 16px;
+    padding: 6px 16px;
     width: fit-content;
-    margin: 8px;
+    margin: 8px 8px 8px 0px;
+    text-transform: uppercase;
+}
+.tag p {
+    margin:0;
 }
 .pink-tag {
     background-color: var(--pink);
@@ -12,4 +16,7 @@
 }
 .green-tag {
     background-color: var(--green);
+}
+.secondary-pink-tag {
+    border: 1px solid var(--pink);
 }

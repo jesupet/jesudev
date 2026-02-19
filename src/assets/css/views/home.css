@@ -98,7 +98,32 @@
 #metodologia h2 {
     padding: 0px 400px;
 }
-#metodologia p {
+#metodologia .subtitle {
     line-height: 1;
     padding: 0px 300px;
+}
+.blue-line {
+    position: absolute;
+    left: 0;
+    bottom: 50%;
+    width: 100%;
+    z-index: -1;
+}
+.step-icon {
+    width: 200px;
+}
+.steps {
+    position: relative;
+}
+/* Proyectos */
+#proyectos {
+    background-color: var(--black);
+    padding: 150px 0px;
+    text-align: center;
+    position: relative;
+}
+#proyectos .curve {
+    top: -1px;
+    z-index: 1;
+    width: 100%;
 }

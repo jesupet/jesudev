@@ -1,6 +1,6 @@
 <template>
     <div :class="tagColor + ` tag`">
-      <p class="p-16">{{ tagText }}</p>
+      <p class="p-12">{{ tagText }}</p>
     </div>
   </template>
   

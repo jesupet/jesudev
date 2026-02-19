@@ -142,8 +142,55 @@
   <section id="metodologia" class="text-center">
     <div class="container">
       <h2 class="black">Una metodología clara, un proceso colaborativo</h2>
-      <p class="subtitle blue">Trabajo con una estructura que combina orden y creatividad, donde el feedback es parte esencial del proceso:
+      <p class="subtitle blue pb-5">Trabajo con una estructura que combina orden y creatividad, donde el feedback es parte esencial del proceso:
       </p>
+      <div class="steps">
+        <img src="@/assets/curves/blue_line.svg" alt="línea azul" class="blue-line">
+        <div class="row">
+          <div class="col-lg-3 text-center">
+            <img src="@/assets/icons/mouth.svg" alt="boca hablando" class="step-icon">
+            <h4 class="black">Reunión Brief Inicial</h4>
+            <p class="p-14 black">
+              Escucho y comprendo el proyecto, su contexto y objetivos. Definimos Carta Gantt con plazos y responsables.
+            </p>
+          </div>
+          <div class="col-lg-3 text-center">
+            <img src="@/assets/icons/hand_puzzle.svg" alt="mano con puzzle" class="step-icon">
+            <h4 class="black">Contenido y Diseño</h4>
+            <p class="p-14 black">
+              Elaboración de contenido, diseño Wireframe (UX) y Diseño Mockup (UI).
+            </p>
+          </div>
+          <div class="col-lg-3 text-center">
+            <img src="@/assets/icons/machine.svg" alt="máquina de escribir" class="step-icon">
+            <h4 class="black">Programación</h4>
+            <p class="p-14 black">
+              Desarrollo Web  en lenguajes y plataformas definidas.
+            </p>
+          </div>
+          <div class="col-lg-3 text-center">
+            <img src="@/assets/icons/computer.svg" alt="máquina de escribir" class="step-icon">
+            <h4 class="black">Sitio web online</h4>
+            <p class="p-14 black">
+              Configuración de hosting y dominio. Pruebas finales de usabilidad.
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+  <section id="proyectos">
+    <img src="@/assets/curves/white_curve_2.svg" alt="curva blanca" class="curve">
+    <div class="container">
+      <h2>Algunos de mis proyectos</h2>
+      <p class="subtitle pink">
+        realizados en colaboración con mis partners
+      </p>
+      <div class="row pt-5">
+        <div class="col-lg-4" v-for="project in projects" :key="project.id">
+          <ProjectCard :project="project" />
+        </div>
+      </div>
     </div>
   </section>
 </template>
@@ -153,6 +200,8 @@ import ButtonComp from '@/components/ButtonComp.vue'
 import BlurText from '@/components/BlurText.vue'
 import ValueCard from '@/components/ValueCard.vue'
 import TagComp from '@/components/TagComp.vue'
+import ProjectCard from '@/components/ProjectCard.vue'
+import { mapState } from 'vuex'
 
 export default {
   name: 'HomeView',
@@ -160,7 +209,11 @@ export default {
     ButtonComp,
     BlurText,
     ValueCard,
-    TagComp
+    TagComp,
+    ProjectCard
+  },
+  computed: {
+    ...mapState(['projects'])
   },
   data() {
     return {

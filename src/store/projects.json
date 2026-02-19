@@ -1,0 +1,22 @@
+[
+    {
+        "id": 1,
+        "companyName": "ESAMI",
+        "date": "Nov 2025",
+        "services": [ "Desarrollo Sitio Web" ],
+        "description": "Diseño de sitio web 100% personalizado. Se buscó la simplificación del código mediante renderización de la información y creación de componentes reutilizables.",
+        "colaboration": "Zooma Design",
+        "image": "esami.png",
+        "link": "https://esami.cl"
+    },
+    {
+        "id": 2,
+        "companyName": "MyH Automotriz",
+        "date": "Noviembre 2025",
+        "services": [ "Identidad Visual", "Desarrollo Sitio Web", "Diseño Sitio Web" ],
+        "description": "Diseño de sitio web 100% personalizado. Se buscó la simplificación del código mediante renderización de la información y creación de componentes reutilizables.",
+        "colaboration": "v.branding",
+        "image": "myh.png",
+        "link": "https://myhautomotriz.cl"
+    }
+]
