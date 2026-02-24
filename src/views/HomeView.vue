@@ -181,7 +181,7 @@
   </section>
   <section id="proyectos">
     <img src="@/assets/curves/white_curve_2.svg" alt="curva blanca" class="curve">
-    <div class="container">
+    <div class="container text-center">
       <h2>Algunos de mis proyectos</h2>
       <p class="subtitle pink">
         realizados en colaboración con mis partners
@@ -189,6 +189,49 @@
       <div class="row pt-5">
         <div class="col-lg-4" v-for="project in projects" :key="project.id">
           <ProjectCard :project="project" />
+        </div>
+      </div>
+    </div>
+    <img src="@/assets/curves/white_curve_3.svg" alt="curva blanca" class="curve2">
+  </section>
+  <section id="partners">
+    <div class="container text-center">
+      <h2 class="black">Alianzas y partners</h2>
+      <p class="subtitle blue">
+        Claves para el desarrollo de mis proyectos
+      </p>
+      <PartnersCarousel />
+    </div>
+  </section>
+  <section id="faqs">
+    <img src="@/assets/curves/white_curve_4.svg" alt="curva blanca" class="curve">
+    <div class="container text-center">
+      <h2>A cada pregunta,</h2>
+      <p class="subtitle green">una respuesta</p>
+    </div>
+    <img src="@/assets/curves/white_curve_5.svg" alt="curva blanca" class="curve2">
+  </section>
+  <section id="cta">
+    <div class="container">
+      <div class="row">
+        <div class="col-lg-7">
+          <h2 class="black">¿Te gustaría trabajar juntos?</h2>
+          <div class="button-cont">
+            <ButtonComp 
+              :btnColor="'btn-primary'" 
+              :buttonText="'Agéndame una reunión'"
+              :linkBtn="'#portafolio'"
+              class="me-3"
+            />
+            <ButtonComp 
+              :btnColor="'btn-secondary'" 
+              :buttonText="'Envíame un mensaje'"
+              :linkBtn="'#portafolio'"
+            />
+          </div>
+        </div>
+        <div class="col-lg-5">
+          <img src="@/assets/img/cta_img.png" alt="imagen de cta" class="img-fluid cta-img">
         </div>
       </div>
     </div>
@@ -201,6 +244,7 @@ import BlurText from '@/components/BlurText.vue'
 import ValueCard from '@/components/ValueCard.vue'
 import TagComp from '@/components/TagComp.vue'
 import ProjectCard from '@/components/ProjectCard.vue'
+import PartnersCarousel from '@/components/PartnersCarousel.vue'
 import { mapState } from 'vuex'
 
 export default {
@@ -210,7 +254,8 @@ export default {
     BlurText,
     ValueCard,
     TagComp,
-    ProjectCard
+    ProjectCard,
+    PartnersCarousel
   },
   computed: {
     ...mapState(['projects'])

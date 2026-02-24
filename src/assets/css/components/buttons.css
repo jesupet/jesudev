@@ -6,6 +6,7 @@
   border: none;
   padding: 12px 24px;
   cursor: pointer;
+  width: fit-content;
 }
 .btn-primary {
   background: var(--gradient-blue-pink);

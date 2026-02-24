@@ -1,0 +1,79 @@
+.partners-carousel {
+  padding: 0px 200px;
+  position: relative;
+}
+
+.partners-carousel .carousel-inner {
+  padding: 1rem 0;
+}
+
+.partners-carousel .partners-slide {
+  min-height: 200px;
+  padding: 0 2rem;
+}
+
+.partners-carousel .partner-logo-wrapper {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 80px;
+  max-width: 180px;
+}
+
+.partners-carousel .partner-logo {
+  max-height: 100%;
+  width: auto;
+  object-fit: contain;
+
+}
+
+
+.partners-carousel .carousel-control-prev,
+.partners-carousel .carousel-control-next {
+  width: 3rem;
+  opacity: 0.7;
+}
+
+.partners-carousel .carousel-control-prev:hover,
+.partners-carousel .carousel-control-next:hover {
+  opacity: 1;
+}
+
+/* Iconos de flecha en rosa (var(--pink)) */
+.partners-carousel .carousel-control-prev-icon,
+.partners-carousel .carousel-control-next-icon {
+  background-image: none;
+  background-color: var(--pink);
+  mask-size: 100% 100%;
+  mask-repeat: no-repeat;
+  mask-position: center;
+  -webkit-mask-size: 100% 100%;
+  -webkit-mask-repeat: no-repeat;
+  -webkit-mask-position: center;
+}
+
+.partners-carousel .carousel-control-prev-icon {
+  mask-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16' fill='black'%3e%3cpath d='M11.354 1.646a.5.5 0 0 1 0 .708L5.707 8l5.647 5.646a.5.5 0 0 1-.708.708l-6-6a.5.5 0 0 1 0-.708l6-6a.5.5 0 0 1 .708 0z'/%3e%3c/svg%3e");
+  -webkit-mask-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16' fill='black'%3e%3cpath d='M11.354 1.646a.5.5 0 0 1 0 .708L5.707 8l5.647 5.646a.5.5 0 0 1-.708.708l-6-6a.5.5 0 0 1 0-.708l6-6a.5.5 0 0 1 .708 0z'/%3e%3c/svg%3e");
+}
+
+.partners-carousel .carousel-control-next-icon {
+  mask-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16' fill='black'%3e%3cpath d='M4.646 1.646a.5.5 0 0 1 .708 0l6 6a.5.5 0 0 1 0 .708l-6 6a.5.5 0 0 1-.708-.708L10.293 8 4.646 2.354a.5.5 0 0 1 0-.708z'/%3e%3c/svg%3e");
+  -webkit-mask-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16' fill='black'%3e%3cpath d='M4.646 1.646a.5.5 0 0 1 .708 0l6 6a.5.5 0 0 1 0 .708l-6 6a.5.5 0 0 1-.708-.708L10.293 8 4.646 2.354a.5.5 0 0 1 0-.708z'/%3e%3c/svg%3e");
+}
+
+.partners-empty {
+  padding: 2rem;
+}
+
+@media (max-width: 767.98px) {
+  .partners-carousel .partners-slide {
+    min-height: 100px;
+    padding: 0 1rem;
+  }
+
+  .partners-carousel .partner-logo-wrapper {
+    height: 56px;
+    max-width: 120px;
+  }
+}

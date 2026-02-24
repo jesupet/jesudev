@@ -15,7 +15,7 @@
       <p class="p-14 text-justify pt-3">
         {{ project.description }}
       </p>
-      <p class="colaboracion p-12 italic pt-4">En colaboración con:<br><span class="uppercase">{{project.colaboration}}</span></p>
+      <p class="colaboracion p-12 italic pt-4" v-if="project.colaboration">En colaboración con:<br><span class="uppercase">{{project.colaboration}}</span></p>
     </div>
 </template>
 
