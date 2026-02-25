@@ -3,12 +3,14 @@
 @import 'base/reset.css';
 
 @import 'layout/navbar.css';
+@import 'layout/footer.css';
 
 
 @import 'components/buttons.css';
 @import 'components/card.css';
 @import 'components/tag.css';
 @import 'components/partners-carousel.css';
+@import 'components/accordion.css';
 
 @import 'views/home.css';
 

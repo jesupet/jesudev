@@ -1,6 +1,7 @@
 <template>
   <section id="hero">
     <div class="container">
+      <!-- Hero Title 
       <BlurText
         text="Tu mejor compañera en el mundo digital"
         :delay="200"
@@ -11,18 +12,21 @@
         root-margin="0px"
         :step-duration="0.35"
         :on-animation-complete="handleAnimationComplete"
-      />
-      <p :class="['hero-description', 'p-20', 'px-5', { 'show': showDescription }]">Te entrego una asesoría integral, comunicación fluida y confianza para que tu marca esté presente.</p>
-      <div :class="['button-cont', 'd-flex', 'gap-2', 'justify-content-center', 'mt-4', { 'show': showButtons }]">
+      />-->
+      <h1 class="hero-title">Tu mejor compañera en el mundo digital</h1>
+      <p class="p-20 px-lg-5">Te entrego una asesoría integral, comunicación fluida y confianza para que tu marca esté presente.</p>
+      <div class="button-cont d-flex gap-2 justify-content-center mt-4">
         <ButtonComp 
             :btnColor="'btn-primary'" 
             :buttonText="'Ver servicios'"
-            :linkBtn="'#servicios'"
+            :hashTag="'#servicios'"
+            :displayLink="true"
           />
           <ButtonComp 
             :btnColor="'btn-secondary'" 
-            :buttonText="'Ver portafolio'"
-            :linkBtn="'#portafolio'"
+            :buttonText="'Ver proyectos'"
+            :hashTag="'#proyectos'"
+            :displayLink="true"
           />
       </div>
     </div>
@@ -32,7 +36,7 @@
   <section id="values">
     <div class="container black">
       <h2 class="black">¿Por qué elegirme?</h2>
-      <p class="subtitle blue">algunas de las razones...</p>
+      <p class="subtitle blue">Algunas de las razones...</p>
       <div class="row pt-5">
         <div class="col-lg-3">
           <ValueCard 
@@ -74,21 +78,22 @@
           <div class="row pt-3">
             <div class="col-lg-6">
               <p class="p-16">
-                Soy programadora front end y asesora digital, y llegué a la tecnología por un camino poco tradicional.Estudié Ingeniería Comercial, trabajé en startups y siempre me movió la curiosidad por aprender y crear. En plena pandemia descubrí la programación... ¡y me encantó! Ahí entendí que podía unir lo que más me apasiona: la creatividad, la organización y el trabajo con propósito.
+                Soy programadora front end y asesora digital, y llegué a la tecnología por un camino poco tradicional. <br>Estudié Ingeniería Comercial, trabajé en startups y siempre me movió la curiosidad por aprender y crear. <br>Durante la pandemia descubrí la programación... y me encantó! Ahí entendí que podía unir lo que más me apasiona: la creatividad, la organización y el trabajo con propósito.
               </p>
             </div>
             <div class="col-lg-6">
               <p class="p-16">
-                Hoy acompaño a empresas, startups y agencias creativas a dar vida a proyectos digitales con un servicio cercano, claro y fluido. No solo programo sitios web: escucho, organizo y traduzco lo técnico a lo simple, para que cada proyecto fluya con confianza y claridad.
+                Hoy acompaño a empresas, startups y agencias creativas a dar vida a proyectos digitales con un servicio cercano, claro y fluido. <br>
+                No solo programo sitios web: escucho, organizo y traduzco lo técnico a lo simple, para que cada proyecto fluya con confianza y claridad.
               </p>
             </div>
           </div>
           <p class="p-20 bold pt-3">
-            Jesu.dev es mi manera de demostrar que la programación puede ser creativa, cercana y con propósito.
+            Jesu.dev es mi manera de mostrar que el desarrollo web puede ser simple, fluido y creativo.
           </p>
           <ButtonComp 
             :btnColor="'btn-primary'" 
-            :buttonText="'¡Conozcámonos'"
+            :buttonText="'¡Conozcámonos!'"
             :linkBtn="'#servicios'"
             class="mt-5"
           />
@@ -101,14 +106,14 @@
     <div class="container">
       <div class="row">
         <div class="col-lg-6 pe-5">
-          <h3>Desarrollo web para empresas y startups</h3>
+          <h3>Asesoría digital para empresas y startups</h3>
           <p class="p-16">
-            Trabajo junto a diseñadoras y equipos creativos para llevar sus ideas al mundo digital. Transformo diseños en código con fidelidad, fluidez y cuidado por los detalles, asegurando que el resultado final refleje la intención original del diseño.
+            Creo sitios web 100% personalizados, dinámicos y con mucha atención a la estructura para lograr una buena interacción con el visitante. No uso plantillas ni porcesos complejos de desarrollo. Priorizo la simplicidad y la eficiencia cuidando siempre los detalles. 
           </p>
           <div class="d-flex flex-wrap justify-content-center pt-3">
             <TagComp 
               :tagColor="'blue-tag'" 
-              :tagText="'Desarrollo Sitio Web'"
+              :tagText="'Desarrollo Web'"
             />
             <TagComp 
               :tagColor="'pink-tag'" 
@@ -125,14 +130,14 @@
           </div>
         </div>
         <div class="col-lg-6 ps-5">
-          <h3>Colaboración con agencias de diseño y diseñadoras</h3>
+          <h3>Colaboración con agencias de diseño</h3>
           <p class="p-16">
             Trabajo junto a diseñadoras y equipos creativos para llevar sus ideas al mundo digital. Transformo diseños en código con fidelidad, fluidez y cuidado por los detalles, asegurando que el resultado final refleje la intención original del diseño.
           </p>
           <div class="d-flex flex-wrap justify-content-center pt-3">
             <TagComp 
               :tagColor="'blue-tag'" 
-              :tagText="'Desarrollo Sitio Web'"
+              :tagText="'Desarrollo Web'"
             />
           </div>
         </div>
@@ -142,7 +147,7 @@
   <section id="metodologia" class="text-center">
     <div class="container">
       <h2 class="black">Una metodología clara, un proceso colaborativo</h2>
-      <p class="subtitle blue pb-5">Trabajo con una estructura que combina orden y creatividad, donde el feedback es parte esencial del proceso:
+      <p class="subtitle blue pb-5">Trabajo con una estructura que combina orden y creatividad, donde el feedback es parte esencial del proceso
       </p>
       <div class="steps">
         <img src="@/assets/curves/blue_line.svg" alt="línea azul" class="blue-line">
@@ -208,6 +213,14 @@
     <div class="container text-center">
       <h2>A cada pregunta,</h2>
       <p class="subtitle green">una respuesta</p>
+      <AccordionDudas class="py-5"/>
+      <ButtonComp 
+        :btnColor="'btn-primary'" 
+        :buttonText="'¿Aún tienes dudas?'"
+        data-tally-open="vGNXR0" 
+        data-tally-hide-title="1"
+        class="mt-5"
+      />
     </div>
     <img src="@/assets/curves/white_curve_5.svg" alt="curva blanca" class="curve2">
   </section>
@@ -220,18 +233,19 @@
             <ButtonComp 
               :btnColor="'btn-primary'" 
               :buttonText="'Agéndame una reunión'"
-              :linkBtn="'#portafolio'"
+              :linkBtn="'https://calendar.app.google/63Mn8yTNpYVNEEk56'"
               class="me-3"
             />
             <ButtonComp 
               :btnColor="'btn-secondary'" 
               :buttonText="'Envíame un mensaje'"
-              :linkBtn="'#portafolio'"
+              data-tally-open="vGNXR0" 
+              data-tally-hide-title="1"
             />
           </div>
         </div>
         <div class="col-lg-5">
-          <img src="@/assets/img/cta_img.png" alt="imagen de cta" class="img-fluid cta-img">
+          <img src="" alt="imagen de cta" class="img-fluid cta-img">
         </div>
       </div>
     </div>
@@ -240,22 +254,24 @@
 
 <script>
 import ButtonComp from '@/components/ButtonComp.vue'
-import BlurText from '@/components/BlurText.vue'
+//import BlurText from '@/components/BlurText.vue'
 import ValueCard from '@/components/ValueCard.vue'
 import TagComp from '@/components/TagComp.vue'
 import ProjectCard from '@/components/ProjectCard.vue'
 import PartnersCarousel from '@/components/PartnersCarousel.vue'
+import AccordionDudas from '@/components/AccordionDudas.vue'
 import { mapState } from 'vuex'
 
 export default {
   name: 'HomeView',
   components: {
     ButtonComp,
-    BlurText,
+    //BlurText,
     ValueCard,
     TagComp,
     ProjectCard,
-    PartnersCarousel
+    PartnersCarousel,
+    AccordionDudas
   },
   computed: {
     ...mapState(['projects'])
@@ -276,6 +292,11 @@ export default {
         this.showButtons = true
       }, 400) // Pequeño delay para transición más suave
     }
-  }
+  },
+  mounted(){
+    if (window.Tally) {
+      window.Tally.loadEmbeds();
+    }
+  },
 }
 </script>

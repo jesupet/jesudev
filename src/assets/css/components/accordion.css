@@ -1,0 +1,77 @@
+#faqs {
+  
+  .accordion-button:not(.collapsed) {
+    color: var(--white);
+    box-shadow: none;
+    border-color: var(--green);
+  }
+  .accordion-header {
+    width: 100%;
+  }
+ 
+  .accordion-button {
+    background-color: transparent;
+    color: var(--white);
+    border: 1px solid var(--pink) !important;
+    margin-bottom: 10px;
+    margin-top: 10px;
+    width: 100%;
+    box-shadow: none;
+    cursor: pointer;
+    border: none;
+    border-radius: 30px;
+  }
+  .accordion-button:focus {
+    box-shadow: none;
+    outline: none;
+  }
+  .accordion-body {
+    padding: 8px;
+  }
+  /* Cambiar flecha por + y - */
+  .accordion-button::after {
+    background-image: url('@/assets/icons/arrow_down.svg');
+    font-size: 28px;
+    font-weight: 300;
+    color: var(--white);
+    transform: rotate(0deg);
+    transition: all 0.3s ease;
+  }
+  .accordion-button:not(.collapsed)::after {
+    background-image: url('@/assets/icons/arrow_down.svg');
+    transform: rotate(180deg);
+  }
+  
+  .accordion-item {
+    border: 0px solid transparent;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: start;
+    box-shadow: none;
+    align-content: flex-start;
+  }
+  .accordion-item:focus,
+  .accordion-item:focus-within {
+    box-shadow: none;
+  }
+  .accordion {
+    min-width: 100%;
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 0.75rem 1.5rem;
+    --bs-accordion-bg: transparent !important;
+  }
+
+  @media (min-width: 992px) {
+    .accordion {
+      grid-template-columns: 1fr 1fr;
+      align-items: start;
+    }
+
+    .accordion-item {
+      width: 100%;
+    }
+  }
+}
+
