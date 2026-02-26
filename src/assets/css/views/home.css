@@ -73,12 +73,20 @@
 #values h2 {
     margin-bottom: 0px;
 }
+#values .container {
+    @media (max-width: 768px) {
+        padding: 0px 0px 0px 24px;
+    }
+}
 
 /* Sobre mí */
 #sobre-mi {
     background-color: var(--black);
     position: relative;
     padding: 200px 0px;
+    @media (max-width: 768px) {
+        padding: 150px 0px 50px;
+    }
 }
 #sobre-mi .curve {
     top: -1px;
@@ -86,20 +94,35 @@
 }
 #sobre-mi h2 {
     padding-right: 700px;
+    @media (max-width: 768px) {
+        padding-right: 0px;
+    }
 }
 #sobre-mi .container {
     position: relative;
+    z-index: 1;
 }
 .sobre-mi-img {
     position: absolute;
     right: 0;
     top: 150px;
     max-width: 550px;
+    @media (max-width: 768px) {
+        position: relative;
+        top: -50px;
+        left: -60px;
+        right: auto;
+        max-width: 120%;
+        z-index: 0;
+    }
 }
 #servicios {
     background-color: var(--black);
     padding: 100px 0px;
     text-align: center;
+    @media (max-width: 768px) {
+        padding: 0px;
+    }
 }   
 
 /* Metodología */
@@ -109,10 +132,16 @@
 }
 #metodologia h2 {
     padding: 0px 400px;
+    @media (max-width: 768px) {
+        padding: 0px;
+    }
 }
 #metodologia .subtitle {
     line-height: 1;
     padding: 0px 300px;
+    @media (max-width: 768px) {
+        padding: 0px;
+    }
 }
 .blue-line {
     position: absolute;
@@ -120,6 +149,9 @@
     bottom: 50%;
     width: 100%;
     z-index: -1;
+    @media (max-width: 768px) {
+        display: none;
+    }
 }
 .step-icon {
     width: 200px;
@@ -127,6 +159,15 @@
 .steps {
     position: relative;
 }
+@media (max-width: 768px) {
+    .steps .row {
+        gap: 50px;
+        padding-left: 32px;
+        padding-right: 32px;
+    }
+  
+}
+
 /* Proyectos */
 #proyectos {
     background-color: var(--black);
@@ -174,9 +215,38 @@ h2 {
 
 /* CTA */
 #cta {
-    padding: 100px 0px;
+    padding: 200px 0px;
     position: relative;
+    overflow: hidden;
+    @media (max-width: 768px) {
+        padding: 100px 0px 0px;
+    }
+}
+@media (max-width: 768px) {
+    .cta-text {
+        padding: 0px 32px;
+    }
 }
 #cta h2 {
     padding-bottom: 32px;
+}
+@media (max-width: 768px) {
+    .button-cont {
+        button {
+            margin-bottom: 12px;
+        }
+    } 
+    #cta .container {
+        padding: 0px;
+    }
+}
+.cta-img {
+    position: absolute;
+    right: 0;
+    bottom: 0;
+    width: 40%;
+    @media (max-width: 768px) {
+        position: relative;
+        width: 100%;
+    }
 }

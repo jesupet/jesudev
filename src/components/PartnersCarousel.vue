@@ -12,7 +12,7 @@
           :key="index"
           :class="['carousel-item', { active: index === 0 }]"
         >
-          <div class="partners-slide d-flex align-items-center justify-content-center gap-4 flex-wrap">
+          <div class="partners-slide d-flex align-items-center justify-content-center gap-lg-4 flex-wrap">
             <div
               v-for="(logo, i) in chunk"
               :key="i"

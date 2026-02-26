@@ -2,7 +2,7 @@
 .navbar-jesudev {
   background-color: var(--black);
   font-family: var(--raleway-font);
-  padding: 20px;
+  padding: 20px 0px;
   position: sticky;
   top: 0;
   z-index: 1030;
@@ -32,6 +32,12 @@
   position: absolute;
   left: 50%;
   transform: translateX(-50%);
+  @media (max-width: 768px) {
+    order: 0;
+    position: relative;
+    transform: none;
+    left: auto;
+  }
 }
 
 @media (min-width: 992px) {
@@ -171,7 +177,6 @@
 .navbar-jesudev .nav-cta-mobile {
   margin-top: 2rem;
   padding-top: 1.5rem;
-  border-top: 1px solid rgba(255, 255, 255, 0.2);
 }
 
 .navbar-logo {

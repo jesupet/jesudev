@@ -34,6 +34,9 @@
     border-radius: 8px;
     min-height: 580px;
     margin-bottom: 48px;
+    @media (max-width: 768px) {
+        min-height: fit-content;
+    }
 }
 .img-proyecto {
     max-width: 100%;

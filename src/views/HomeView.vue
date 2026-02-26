@@ -37,35 +37,17 @@
     <div class="container black">
       <h2 class="black">¿Por qué elegirme?</h2>
       <p class="subtitle blue">Algunas de las razones...</p>
-      <div class="row pt-5">
-        <div class="col-lg-3">
-          <ValueCard 
-            :number="'1'"
-            :title="'Asesoría Experta'"
-            :description="'Escucho tus necesidades y elaboramos un plan para elevar tu marca, Mi rol es traducir lo técnico a lo simple y entregar soluciones que hagan sentido a tu negocio.'"
+      <div class="row pt-5 d-none d-lg-flex">
+        <div class="col-lg-3" v-for="(card, index) in valueCards" :key="`desktop-value-${index}`">
+          <ValueCard
+            :number="card.number"
+            :title="card.title"
+            :description="card.description"
           />
         </div>
-        <div class="col-lg-3">
-          <ValueCard 
-            :number="'2'"
-            :title="'Planificación y claridad'"
-            :description="'Me gusta trabajar con procesos organizados: plazos definidos, entregas claras y un camino que te da seguridad desde el primer día. Así sabes qué esperar en cada etapa del proyecto.'"
-          />
-        </div>
-        <div class="col-lg-3">
-          <ValueCard 
-            :number="'3'"
-            :title="'Comunicación fluida'"
-            :description="'La buena comunicación es la base de todo. Respondo rápido, escucho activamente y mantengo una relación cercana para que el proyecto avance sin problemas.'"
-          />
-        </div>
-        <div class="col-lg-3">
-          <ValueCard 
-            :number="'4'"
-            :title="'Profesionalismo'"
-            :description="'Cumplo lo que prometo. Soy responsable, transparente y me tomo cada proyecto con la seriedad que merece, cuidando tanto la parte técnica como la relación con el cliente.'"
-          />
-        </div>
+      </div>
+      <div class="d-lg-none pt-4">
+        <ValueCardsCarousel :cards="valueCards" />
       </div>
     </div>
   </section>
@@ -94,7 +76,7 @@
           <ButtonComp 
             :btnColor="'btn-primary'" 
             :buttonText="'¡Conozcámonos!'"
-            :linkBtn="'#servicios'"
+            :linkBtn="'https://calendar.app.google/63Mn8yTNpYVNEEk56'"
             class="mt-5"
           />
         </div>
@@ -105,7 +87,7 @@
   <section id="servicios">
     <div class="container">
       <div class="row">
-        <div class="col-lg-6 pe-5">
+        <div class="col-lg-6 pe-lg-5">
           <h3>Asesoría digital para empresas y startups</h3>
           <p class="p-16">
             Creo sitios web 100% personalizados, dinámicos y con mucha atención a la estructura para lograr una buena interacción con el visitante. No uso plantillas ni porcesos complejos de desarrollo. Priorizo la simplicidad y la eficiencia cuidando siempre los detalles. 
@@ -129,7 +111,7 @@
             />
           </div>
         </div>
-        <div class="col-lg-6 ps-5">
+        <div class="col-lg-6 ps-lg-5 py-lg-0 py-5">
           <h3>Colaboración con agencias de diseño</h3>
           <p class="p-16">
             Trabajo junto a diseñadoras y equipos creativos para llevar sus ideas al mundo digital. Transformo diseños en código con fidelidad, fluidez y cuidado por los detalles, asegurando que el resultado final refleje la intención original del diseño.
@@ -191,11 +173,24 @@
       <p class="subtitle pink">
         realizados en colaboración con mis partners
       </p>
-      <div class="row pt-5">
+      <div class="row pt-5 d-none d-lg-flex">
         <div class="col-lg-4" v-for="project in projects" :key="project.id">
           <ProjectCard :project="project" />
         </div>
       </div>
+      <div class="row pt-5 d-lg-none">
+        <div class="col-12" v-for="project in displayedProjectsMobile" :key="`mobile-project-${project.id}`">
+          <ProjectCard :project="project" />
+        </div>
+      </div>
+      <button
+        v-if="shouldShowProjectsButton"
+        class="btn btn-primary d-lg-none mt-3"
+        type="button"
+        @click="showAllProjectsMobileAction"
+      >
+        Ver todos
+      </button>
     </div>
     <img src="@/assets/curves/white_curve_3.svg" alt="curva blanca" class="curve2">
   </section>
@@ -227,8 +222,8 @@
   <section id="cta">
     <div class="container">
       <div class="row">
-        <div class="col-lg-7">
-          <h2 class="black">¿Te gustaría trabajar juntos?</h2>
+        <div class="col-lg-7 cta-text">
+          <h2 class="black">¿Te gustaría trabajar junt@s?</h2>
           <div class="button-cont">
             <ButtonComp 
               :btnColor="'btn-primary'" 
@@ -245,7 +240,7 @@
           </div>
         </div>
         <div class="col-lg-5">
-          <img src="" alt="imagen de cta" class="img-fluid cta-img">
+          <img src="@/assets/img/cta_img.png" alt="imagen de cta" class="img-fluid cta-img">
         </div>
       </div>
     </div>
@@ -256,11 +251,12 @@
 import ButtonComp from '@/components/ButtonComp.vue'
 //import BlurText from '@/components/BlurText.vue'
 import ValueCard from '@/components/ValueCard.vue'
+import ValueCardsCarousel from '@/components/ValueCardsCarousel.vue'
 import TagComp from '@/components/TagComp.vue'
 import ProjectCard from '@/components/ProjectCard.vue'
 import PartnersCarousel from '@/components/PartnersCarousel.vue'
 import AccordionDudas from '@/components/AccordionDudas.vue'
-import { mapState } from 'vuex'
+import { mapActions, mapGetters, mapState } from 'vuex'
 
 export default {
   name: 'HomeView',
@@ -268,30 +264,21 @@ export default {
     ButtonComp,
     //BlurText,
     ValueCard,
+    ValueCardsCarousel,
     TagComp,
     ProjectCard,
     PartnersCarousel,
     AccordionDudas
   },
   computed: {
-    ...mapState(['projects'])
-  },
-  data() {
-    return {
-      showDescription: false,
-      showButtons: false
-    }
+    ...mapState(['projects', 'valueCards', 'showDescription', 'showButtons', 'showAllProjectsMobile']),
+    ...mapGetters(['displayedProjectsMobile', 'shouldShowProjectsButton'])
   },
   methods: {
-    handleAnimationComplete() {
-      // Mostrar el párrafo después de que termine la animación del título
-      setTimeout(() => {
-        this.showDescription = true
-      }, 200) // Pequeño delay para transición más suave
-      setTimeout(() => {
-        this.showButtons = true
-      }, 400) // Pequeño delay para transición más suave
-    }
+    ...mapActions({
+      handleAnimationComplete: 'handleHomeAnimationComplete',
+      showAllProjectsMobileAction: 'showAllProjectsMobile'
+    })
   },
   mounted(){
     if (window.Tally) {
