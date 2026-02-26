@@ -15,8 +15,14 @@
 
 .navbar-jesudev .nav-toggler-jesudev .navbar-toggler-icon {
   background-image: url("@/assets/icons/toggler_icon.svg");
+  width: 80px;
+  @media (max-width: 768px) {
+    width: 50px;
+  }
 }
-
+.navbar-toggler {
+  padding: 0px;
+}
 @media (min-width: 992px) {
   .navbar-jesudev .nav-toggler-jesudev {
     order: 1;

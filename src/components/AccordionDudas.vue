@@ -4,6 +4,8 @@
       v-for="item in faqAccordionItems"
       :key="item.id"
       class="accordion-item"
+      data-aos="zoom-out"
+      :data-aos-delay="index * 100"
     >
       <h4 class="accordion-header">
         <button
