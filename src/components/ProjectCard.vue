@@ -1,7 +1,12 @@
 <template>
     <div class="card-proyecto text-start">
-      <a :href="project.link" target="_blank"><img :src="require(`@/assets/img/${project.image}`)" :alt="project.companyName" class="img-fluid img-proyecto"></a>
-      <h4>{{ project.companyName }}</h4>
+      <a :href="project.link" target="_blank" rel="noopener noreferrer" class="project-link">
+        <img :src="require(`@/assets/img/${project.image}`)" :alt="project.companyName" class="img-fluid img-proyecto">
+        <div class="project-overlay">
+          <span class="project-overlay-text">Ir al sitio web</span>
+        </div>
+      </a>
+      <h4 class="mt-3">{{ project.companyName }}</h4>
       <p class="p-12">{{ project.date }}</p>
       <div class="d-flex flex-wrap tag-cont">
         <TagComp 

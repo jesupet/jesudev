@@ -14,7 +14,7 @@
         :on-animation-complete="handleAnimationComplete"
       />-->
       <h1 class="hero-title"><span data-aos="fade-up" data-aos-delay="100">Tu </span><span data-aos="fade-up" data-aos-delay="300">mejor </span><span data-aos="fade-up" data-aos-delay="500">compañera </span><span data-aos="fade-up" data-aos-delay="700">en el </span><span data-aos="fade-up" data-aos-delay="900">mundo </span><span data-aos="fade-up" data-aos-delay="1100">digital </span></h1>
-      <p class="p-20 px-lg-5" data-aos="fade-up"  data-aos-delay="900">Te entrego una asesoría integral, comunicación fluida y confianza para que tu marca esté presente.</p>
+      <p class="p-20 px-lg-5" data-aos="fade-up"  data-aos-delay="900">Desarrollo sitios web 100% personalizados, cumpliendo con los plazos y manteniendo una comunicación fluida.</p>
       <div class="button-cont d-flex gap-2 mt-4">
         <ButtonComp 
             :btnColor="'btn-primary'" 
@@ -94,7 +94,7 @@
         <div class="col-lg-6 pe-lg-5" data-aos="fade-up" data-aos-delay="100">
           <h3>Asesoría digital para empresas y startups</h3>
           <p class="p-16">
-            Creo sitios web 100% personalizados, dinámicos y con mucha atención a la estructura para lograr una buena interacción con el visitante. No uso plantillas ni porcesos complejos de desarrollo. Priorizo la simplicidad y la eficiencia cuidando siempre los detalles. 
+            Creo sitios web 100% personalizados, dinámicos y con mucha atención a la estructura para lograr una buena interacción con el visitante. No uso plantillas ni porcesos complejos de desarrollo. Priorizo la simplicidad y la eficiencia cuidando siempre los detalles. <br>Todo comienza por una identidad de marca que impacte, si no la tienes, te ayudamos a crearla!
           </p>
           <div class="d-flex flex-wrap justify-content-center pt-3">
             <TagComp 

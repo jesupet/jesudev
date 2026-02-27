@@ -40,7 +40,42 @@
 }
 .img-proyecto {
     max-width: 100%;
-    margin-bottom: 24px;
     transition: all 0.3s ease;
+    display: block;
+}
+
+.project-link {
+    position: relative;
+    display: block;
+    border-radius: 8px 8px 0px 0px;
+    overflow: hidden;
+}
+
+.project-overlay {
+    position: absolute;
+    inset: 0;
+    background: rgba(47, 97, 171, 0.82);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    opacity: 0;
+    transition: opacity 0.3s ease;
+}
+
+.project-overlay-text {
+    color: var(--white);
+    font-weight: 600;
+    font-family: var(--raleway-font);
+    font-size: 16px;
+    text-decoration: underline;
+    text-underline-offset: 4px;
+}
+
+.project-link:hover .project-overlay {
+    opacity: 1;
+}
+
+.project-link:hover .img-proyecto {
+    transform: scale(1.03);
 }
 
