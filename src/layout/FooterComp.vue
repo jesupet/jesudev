@@ -7,7 +7,7 @@
                 </div>
                 <div class="col-lg-4 text-center mt-lg-0 mt-4">
                     <p class="p-14"><a href="mailto:mjpetour@gmail.com">mjpetour@gmail.com</a></p>
-                    <p class="p-14"><a href="tel:+56993197223">+56 9 9319 7223</a></p>
+                    <p class="p-14"><a href="tel:+56993197262">+56 9 9319 7262</a></p>
                 </div>
                 <div class="col-lg-4 text-lg-end text-center rrss mt-lg-0 mt-5">
                     <a href="https://www.instagram.com/jesu_dev/" target="_blank"><img src="@/assets/icons/insta.svg" alt="icono instagram" class="me-2"></a>

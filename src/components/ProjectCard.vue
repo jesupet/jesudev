@@ -1,26 +1,35 @@
 <template>
     <div class="card-proyecto text-start">
-      <a :href="project.link" target="_blank" rel="noopener noreferrer" class="project-link">
-        <img :src="require(`@/assets/img/${project.image}`)" :alt="project.companyName" class="img-fluid img-proyecto">
-        <div class="project-overlay">
-          <span class="project-overlay-text">Ir al sitio web</span>
+      <div>
+        <a :href="project.link" target="_blank" rel="noopener noreferrer" class="project-link">
+          <img :src="require(`@/assets/img/${project.image}`)" :alt="project.companyName" class="img-fluid img-proyecto">
+          <div class="project-overlay">
+            <span class="project-overlay-text">Ir al sitio web</span>
+          </div>
+        </a>
+        <h4 class="mt-3">{{ project.companyName }}</h4>
+        <p class="p-12">{{ project.date }}</p>
+        <div>
+          <div class="d-flex flex-wrap tag-cont">
+            <TagComp 
+              :key="index"
+              :tagColor="getTagColorForService(service)"
+              :tagText="service"
+              v-for="(service, index) in project.services"
+              class="mb-0"
+            />
+          </div>
+          <p class="p-14 text-justify pt-3">
+            {{ project.description }}
+          </p>
         </div>
-      </a>
-      <h4 class="mt-3">{{ project.companyName }}</h4>
-      <p class="p-12">{{ project.date }}</p>
-      <div class="d-flex flex-wrap tag-cont">
-        <TagComp 
-          :key="index"
-          :tagColor="getTagColorForService(service)"
-          :tagText="service"
-          v-for="(service, index) in project.services"
-          class="mb-0"
-        />
       </div>
-      <p class="p-14 text-justify pt-3">
-        {{ project.description }}
-      </p>
-      <p class="colaboracion p-12 italic pt-4" v-if="project.colaboration">En colaboración con:<br><span class="uppercase">{{project.colaboration}}</span></p>
+      <div class="card-proyecto-footer d-flex pt-4" :class="{ 'card-proyecto-footer--icon-only': !project.colaboration }">
+        <p class="colaboracion p-12 italic mb-0" v-if="project.colaboration">En colaboración con:<br><span class="uppercase">{{project.colaboration}}</span></p>
+        <a :href="project.link" target="_blank" rel="noopener noreferrer" class="project-link-icon">
+          <img src="@/assets/icons/abrir.svg" alt="Abrir sitio web" class="open-icon">
+        </a>
+      </div>
     </div>
 </template>
 

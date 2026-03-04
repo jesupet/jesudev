@@ -74,11 +74,12 @@
 @media (max-width: 767.98px) {
   .partners-carousel .partners-slide {
     min-height: 100px;
-    padding: auto;
+    padding: 0;
   }
 
   .partners-carousel .partner-logo-wrapper {
-    height: 150px;
-    max-width: 150px;
+    height: 80px;
+    max-width: 80px;
+    padding: 0px 5px;
   }
 }

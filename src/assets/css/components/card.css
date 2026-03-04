@@ -36,7 +36,10 @@
     margin-bottom: 48px;
     @media (max-width: 768px) {
         min-height: fit-content;
-    }
+    };
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
 }
 .img-proyecto {
     max-width: 100%;
@@ -79,3 +82,26 @@
     transform: scale(1.03);
 }
 
+/* Footer de la card: colaboración + icono abrir */
+.card-proyecto-footer {
+    justify-content: space-between;
+    align-items: flex-end;
+}
+
+.card-proyecto-footer--icon-only {
+    justify-content: flex-end;
+}
+
+.project-link-icon {
+    display: inline-flex;
+    flex-shrink: 0;
+}
+
+.open-icon {
+    display: none;
+    @media (max-width: 768px) {
+        display: block;
+        width: 24px;
+        height: 24px;
+    }
+}

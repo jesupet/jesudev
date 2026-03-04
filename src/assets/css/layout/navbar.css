@@ -1,16 +1,22 @@
 
 .navbar-jesudev {
-  background-color: var(--black);
+  background-color: transparent;
   font-family: var(--raleway-font);
-  padding: 20px 0px;
-  position: sticky;
+  padding: 10px 0px;
+  position: fixed;
   top: 0;
   z-index: 1030;
+  min-width: 100%;
 }
 
 /* Un solo toggler: en desktop order 1 (izquierda), en mobile order 4 (derecha) */
 .navbar-jesudev .nav-toggler-jesudev {
   order: 4;
+  border: 0px;
+}
+.navbar-toggler:focus {
+  box-shadow: none !important;
+  border: 0px !important;
 }
 
 .navbar-jesudev .nav-toggler-jesudev .navbar-toggler-icon {
