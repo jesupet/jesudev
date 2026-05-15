@@ -1,4 +1,35 @@
 [
+    
+    {
+        "id": 15,
+        "companyName": "Constanza Puga Photo",
+        "date": "Mayo 2026",
+        "services": ["Branding","Diseño Web UX UI", "Desarrollo Web"],
+        "description": "Creación de sitio web con un diseño a medida en base a la identidad de marca construida. Implementación en plataforma Squarespace.",
+        "colaboration": "otra metáfora design",
+        "image": "constanza-puga-photo.png",
+        "link": "https://www.constanzapugaph.cl"
+    },
+    {
+        "id": 14,
+        "companyName": "Inmobiliaria Las Heras",
+        "date": "Mayo 2026",
+        "services": ["Branding","Diseño Web UX UI", "Desarrollo Web"],
+        "description": "Creación de Landingpage con un diseño a medida y desarrollo en código JavaScript.",
+        "colaboration": "v.branding",
+        "image": "las-heras.png",
+        "link": "https://www.inmobiliarialasheras.cl"
+    },
+    {
+        "id": 16,
+        "companyName": "LoBLab Solutions",
+        "date": "Abril 2026",
+        "services": ["Diseño Web UX UI", "Desarrollo Web"],
+        "description": "El sitio anterior requería una reestructuración de contenido para explicar con mayor claridad los servicios y metodología utilizada. Se realizó un rediseño y se implementó en la plataforma Squarespace.",
+        "colaboration": "",
+        "image": "loblab.png",
+        "link": "https://www.loblab.solutions"
+    },
     {
         "id": 0,
         "companyName": "FlexMod",
@@ -113,16 +144,6 @@
         "description": "Desarrollo landingpage diseño a medida entregado por el cliente.",
         "image": "thepalpa.png",
         "link": "https://www.thepalpa.com"
-    },
-    {
-        "id": 12,
-        "companyName": "Puya Propiedades",
-        "date": "Abr 2025",
-        "services": ["Diseño Web UX UI", "Desarrollo Web", "Branding", "otros diseños"],
-        "description": "Comenzamos con la creación del nombre de esta corredora de propiedades, luego diseñamos su logotipo e identidad para luego pasar al sitio web. Diseño y desarrollo de sitio web 100% personalizado con administrador de propiedades en Wordpress.",
-        "colaboration": "otra metáfora design",
-        "image": "puya.png",
-        "link": "https://www.puyapropiedades.cl"
     },
     {
         "id": 13,
